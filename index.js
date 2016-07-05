@@ -177,7 +177,6 @@ export default class Camera extends Component {
     options = {
       audio: props.captureAudio,
       barCodeTypes: props.barCodeTypes,
-      playSoundOnCapture: props.playSoundOnCapture,
       mode: props.captureMode,
       playSoundOnCapture: props.playSoundOnCapture,
       target: props.captureTarget,
@@ -218,6 +217,8 @@ export default class Camera extends Component {
     return CameraManager.hasFlash();
   }
 }
+
+export const constants = Camera.constants;
 
 const RCTCamera = requireNativeComponent('RCTCamera', Camera);
 
